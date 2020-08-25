@@ -10,6 +10,9 @@ function Nav() {
       <Link className="navbar-brand" to="/projects">
         Projects
       </Link>
+      <Link className="navbar-brand" to="/test">
+        Test
+      </Link>
     </nav>
   );
 }

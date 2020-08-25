@@ -3,6 +3,7 @@ import { useStoreContext } from '../utils/GlobalStore';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Projects from "./Projects.js";
 import Nav from "../components/Nav";
+import TestArea from "./TestArea.js";
 
 function Members() {
   const [state] = useStoreContext();
@@ -24,6 +25,11 @@ function Members() {
           <Route exact path="/projects">
             <Projects />
           </Route>
+
+          <Route exact path="/test">
+            <TestArea />
+          </Route>
+
         </Switch>
       </div>
     </Router>

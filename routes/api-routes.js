@@ -44,4 +44,52 @@ module.exports = function(app) {
       });
     }
   });
+
+
+
+
+
+  app.get("/api/testgetall", function(req, res){
+    db.Project.findAll({
+
+    }).then(function(projects){
+      res.json(projects);
+    });
+  });
+
+  app.post("/api/testaddproject", function(req, res) {
+    db.Project.create({
+      // email: req.body.email,
+      // password: req.body.password,
+
+      shape: req.body.shape,
+      width: req.body.width,
+      height: req.body.height,
+      depth: req.body.depth,
+      radius: req.body.radius,
+      area: req.body.area,
+      parameter: req.body.parameter
+    })
+      .then(function() {
+        console.log("RECORD ADDED!");
+      })
+      .catch(function(err) {
+        res.status(401).json(err);
+      });
+  });
+
+  app.get("/api/projects/:testviewbyshapetype", function(req, res){
+    console.log("testingPOST1....", req.params);
+    db.Project.findAll({
+      where: {
+        shape: req.params.shape
+      }
+    }).then(function(projects){
+      res.json(projects);
+      console.log("testingPOST2.....", projects)
+    });
+  });
+
+
+
 };

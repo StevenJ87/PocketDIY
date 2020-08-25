@@ -1,0 +1,7 @@
+.form-group{
+    display: inline-block;
+    }
+
+label {
+    display: block;
+}

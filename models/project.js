@@ -20,18 +20,18 @@ module.exports = function(sequelize, DataTypes) {
       area:{
         type: DataTypes.INTEGER
       },
-      parimeter:{
+      parameter:{
         type: DataTypes.INTEGER
       }
     });
 
-    Project.associate = function(models) {
-      Project.belongsTo(models.User, {
-        foreignKey: {
-          allowNull: false
-        }
-      });
-    };
+    // Project.associate = function(models) {
+    //   Project.belongsTo(models.User, {
+    //     foreignKey: {
+    //       allowNull: false
+    //     }
+    //   });
+    // };
     
     return Project;
   };

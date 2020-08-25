@@ -18,25 +18,25 @@ module.exports = function(app) {
   });
 
   // POST route ================================================
-  app.post("/api/projects", function(req, res) {
-    // Create a new post object
-    db.Projects.create({
-      shape: req.body.shape,
-      width: req.body.width,
-      height: req.body.height,
-      depth: req.body.depth,
-      radius: req.body.radius,
-      area: req.body.area,
-      parimeter: req.body.parameter,
-      UserId: req.user.id
-    })
-      .then(function(dbProject) {
-        res.json(dbProject);
-      })
-      .catch(function(err) {
-        res.json(err);
-      });
-  });
+  // app.post("/api/projects", function(req, res) {
+  //   // Create a new post object
+  //   db.Projects.create({
+  //     shape: req.body.shape,
+  //     width: req.body.width,
+  //     height: req.body.height,
+  //     depth: req.body.depth,
+  //     radius: req.body.radius,
+  //     area: req.body.area,
+  //     parimeter: req.body.parimeter
+  //     // UserId: req.user.id
+  //   })
+  //     .then(function(dbProject) {
+  //       res.json(dbProject);
+  //     })
+  //     .catch(function(err) {
+  //       res.json(err);
+  //     });
+  // });
 
   // DELETE route ===============================================
   app.delete("/api/projects/:id", function(req, res) {

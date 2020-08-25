@@ -21,11 +21,11 @@ module.exports = function(sequelize, DataTypes) {
   
   //_____________________________
   // User association to projects
-  User.associate = function(models) {
-    User.hasMany(models.Project, {
-      onDelete: "cascade"
-    });
-  };
+  // User.associate = function(models) {
+  //   User.hasMany(models.Project, {
+  //     onDelete: "cascade"
+  //   });
+  // };
   // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
   // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
