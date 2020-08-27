@@ -9,7 +9,6 @@ import CircleCard from "../components/InputCard/circleCard";
 import ShapeArea from "../components/ShapeSection/shapeArea";
 import drawing from '../images/181.png';
 import Figure from 'react-bootstrap/Figure';
-import '../css/main.css';
 
 
 
@@ -26,16 +25,15 @@ function Members() {
             <Route exact path="/members">
               <div className='memberContainer'>
                 <div className="Title" >
-                  <h2 className="welcome">Welcome {email}</h2>
-                  <h2 className="subheader">Choose a shape for your project</h2>
+                  <h2>Welcome {email}</h2>
                 </div>
                 <div className="shapeSection">
                   <ShapeArea />
                 </div>
-                <Figure className="membersPicbox">
+                <Figure>
                   <Figure.Image
-                    width={431}
-                    height={440}
+                    width={531}
+                    height={540}
                     alt="171x180"
                     src={drawing}
                   />
